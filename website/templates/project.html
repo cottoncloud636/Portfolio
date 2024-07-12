@@ -12,9 +12,15 @@
         {% comment %} in this html comes from admin DB, {%endcomment%}
         <div class="project-detailsub">
             <p class="desc">{{ project.formatted_description|linebreaks|safe}}</p>
-            <div class="picarea">
-                <img src="{{project.screenshot.url}}" alt="{{ project.title }}" class="project-{{ project.id }}">
-            </div>
+            {% if project.screenshot %}
+                <div class="picarea">
+                    <img src="{{project.screenshot.url}}" alt="{{ project.title }}" class="project-{{ project.id }}">
+                </div>
+            {% elif project.youtube %}
+                <iframe width="560" height="315" src="{{ project.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            {% else %}
+                <p>No media available.</p>
+            {% endif %}    
         </div>
         
         

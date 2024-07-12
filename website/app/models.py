@@ -9,6 +9,7 @@ class Project(models.Model): #inheriting functionality and features provided by 
     screenshot = models.ImageField(upload_to=path1, blank=True, null=True)
     title = models.CharField(max_length=20)
     description = models.TextField()
+    youtube = models.URLField(blank=True, null=True)
 
     def __str__ (self): #this method returns the title name in admin interface, w/o this, it will return an "object" literally
         return self.title
