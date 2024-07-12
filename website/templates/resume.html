@@ -1,0 +1,125 @@
+{%extends 'base.html'%}
+{%block title %}Resume{%endblock title%}
+{%load static%}
+
+{%block background-image%}{% static 'assets/img/resumestar.png' %}{%endblock background-image%}
+{%block header-image%}<img src="{% static 'assets/img/mercury-motion.gif' %}" alt="header-image" class="picture">{%endblock header-image%}
+
+
+{% comment %} 
+{%block content%}
+<div class="resumecontainer">
+    
+    <iframe src="{% static 'assets/media/Resume.pdf' %}?zoom=120" title="resume page" class="resume"></iframe>
+</div>
+{%endblock content%} {% endcomment %}
+
+
+{% block content %}
+<div class="resume-container">
+  <div class="left-column">
+    <img src="{% static 'assets/img/ID-Photo.jpg' %}" alt="Profile Picture" class="profile-picture">
+    <h1>Xian (Natasha) Zhou</h1>
+    <h2>Software Engineer</h2>
+    <div class="contact-info">
+      <p><a href="mailto:natashazhou88@gmail.com">Email: natashazhou88@gmail.com</a></p>
+      <br></br>
+      <p> Phone#: 917-963-3460</p>
+      <br></br>
+      <p><a href="https://linkedin.com/in/natasha-zhou-b9612391">LinkedIn: natasha-zhou</a></p>
+      <br></br>
+      <p><a href="https://github.com/cottoncloud636">GitHub: cottoncloud636</a></p>
+    </div>
+    <div class="skills">
+      <h3>Skills/Tools</h3>
+      <ul class="skilltext">
+        <li>🖥️ Java</li>
+        <li>🐍 Python</li>
+        <li>🔧 C++</li>
+        <li>💻 JavaScript</li>
+        <br></br>
+        <li>💾 SQL</li>
+        <li>🌐 MongoDB</li>
+        <li>🕸️ Node.js</li>
+        <br></br>
+        <li>⚛️ React</li>
+        <li>🔗 Git</li>
+        <li>🌐 RESTful APIs</li>
+        <li>🤖 Machine Learning (NLP)</li>
+        <li>📊 Data Analytics</li>
+        <br></br>
+        <li>🆎 English (Proficient)</li>
+        <li>🈚 Chinese (Proficient)</li>
+        <li>🥸 French (Intermediate)</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="right-column">
+    <div class="section">
+      <h3>Objectives</h3>
+      <p>Seeking a software engineering/development role where I can leverage my problem-solving and analytical skills. Holding a Master's degree in Computer Science, along with transferable skills from the military, I am eager to apply my expertise in a dynamic and challenging environment.</p>
+    </div>
+
+    <div class="section">
+      <h3>Education/Certificates</h3>
+      <ul>
+        <li>Microsoft Certified, Microsoft Azure Fundamentals AZ-900, April 2024</li>
+        <li>CUNY, Queens College, New York, NY, Master's Degree in Computer Science, September 2023</li>
+        <li>St. John's University, New York, NY, MBA in Computer Information Systems, May 2019</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Military</h3>
+      <ul>
+        <li>United States Navy Reserve, September 2020 - Present</li>
+        <li>Rank/Rate: PO2 / Secret Clearance</li>
+        <li>Duties: Streamline logistics workflow utilizing Defense Logistics Agency SAP software. Process daily on average 50 incoming mails and 10 pallets of cargo from origin to final delivery with a total appropriate value of $2,000,000.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Technical Projects</h3>
+      <div class="project">
+        <h4>Art-Marché (MERN app)</h4>
+        <ul>
+          <li>A MERN web app with user registration and login, allowing users to post artworks, browse others’ uploads.</li>
+          <li>Utilized React.js for frontend to build dynamic user interface, and Tailwind CSS for styling.</li>
+          <li>Setup API route for data creation, retrieval, update, and deletion.</li>
+          <li>Employed JWT, Firebase, and Google OAuth for secure user access.</li>
+          <li>Integrated MongoDB for data management, employed Mongoose for schema creation and database interactions.</li>
+          <li>Led the backend development using Node.js and Express.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h4>Airbite (Socket application)</h4>
+        <ul>
+          <li>A group project built with Python and Java within a client-server architecture to enable real-time message transmission.</li>
+          <li>Team implemented GUI in Java for better UX.</li>
+          <li>Established seamless connections between server and clients through socket programming techniques.</li>
+          <li>Managed local and online repos using the Git command line interface via PowerShell and GitHub.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h4>Personal Portfolio Website</h4>
+        <ul>
+          <li>Used Django framework and Python for backend logic and functionality.</li>
+          <li>Implemented JavaScript for interactivity and CSS for enhanced visual appeal and UX.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h4>Software Engineering Fellow (Full-stack Java Spring Boot Focus)</h4>
+        <ul>
+          <li>Completed an immersive software engineering fellowship software engineering training over 12 weeks.</li>
+          <li>Designed a Java + Python template, HTML/CSS for enhancing frontend visual appeal and UX.</li>
+          <li>Familiarized myself with the Spring framework till CRUD functionality and adherence to MVC architecture principles.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

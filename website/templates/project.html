@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+{%block title %}Project detail{% endblock title %}
+{%load static%}
+
+{% block fullname %}<h1 class="projtitle">{{project.title}} </h1>{% endblock fullname %}
+{% block header-image %} {% endblock header-image %}"
+
+{% block content %}
+    <div class="project-detail">
+        {% comment %} <h2>{{project.title}}</h2> ---------{%comment%} html doesn't respond to {{project.name}}, means the info  {% endcomment %}
+        {% comment %} in this html comes from admin DB, {%endcomment%}
+        <div class="project-detailsub">
+            <p class="desc">{{ project.formatted_description|linebreaks|safe}}</p>
+            <div class="picarea">
+                <img src="{{project.screenshot.url}}" alt="{{ project.title }}" class="project-{{ project.id }}">
+            </div>
+        </div>
+        
+        
+    </div>
+{% endblock content %}

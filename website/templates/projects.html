@@ -1,0 +1,68 @@
+{%extends 'base.html'%}
+{%block title %}Projects{% endblock title %}
+{%load static%}
+
+{%block background-image%}{% static 'assets/img/nebula.jpg' %}{%endblock background-image%}
+{%block header-image%}<img src="{% static 'assets/img/venus-motion.gif'%}" alt="header-image" class="picture">{%endblock header-image%}
+
+{% block content %}
+{% comment %} <div class="btmprojects">
+    <div class="subcontainer">
+        
+        {% for project in projects %}
+        
+        <div class="proj" data-project-id="{{ project.id }}">
+            <a href="/projects/project/{{project.id}}"><img src="{{project.image}} " class="projectpicture-{{project.id}}"></a>
+            <div class="word">
+                <h4>{{project.name}}</h4>
+                <p class="brf">{{project.brief}}<p>
+                <p class="leftclick">👈click the image for more detail</p>
+            </div>
+            <div class="likes">
+                <span id="clicklikes{{project.id}}">{{project.likes}} like(s)</span>
+                <button class="likeme" onclick="like({{project.id}})">Like me!</button>
+            </div> 
+        
+        </div>
+
+        {% endfor %} {% endcomment %}
+
+        
+
+        <div class="btmprojects">
+            <div class="subcontainer">
+                {% for project in projects %} {% comment %} the name "projects" here should be the same as in 
+                views.py: {'projects': projs} {% endcomment %}
+                <div class="proj" data-project-id="{{ project.id }}">
+                    <div class="proj-header">
+                        <a href="/projects/project/{{project.id}}"><img src="{{ project.image }}" class="projectpicture-{{ project.id }}"></a>
+                        <h4>{{ project.name }}</h4>
+                    </div>
+                    <div class="proj-body">
+                        <p class="brf">{{ project.brief }}</p>
+                        <a href="/projects/project/{{project.id}}"><button class="read-more">read more</button></a>
+                    </div>
+                    <div class="proj-footer">
+                        <span id="clicklikes{{ project.id }}">{{ project.likes }} like(s)</span>
+                        <button class="likeme" onclick="like({{ project.id }})">Like me!</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+        
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+{% endblock content %}

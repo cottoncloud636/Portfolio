@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock title %}
+
+{% block stylecss %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock stylecss %}
+
+{%block background-image%}{% static 'assets/img/neutron-star.jpg' %}{%endblock background-image%}
+{%block header-image%}<img src="{% static 'assets/img/earth-motion.gif'%} " alt="header-image" class="picture">{%endblock header-image%}
+
+{%block content%}
+<div class="btmcontact">
+    <div class="contactsubcontainer">
+        <ul class="contacts">
+            <li class="contactaction">
+                <img src="{% static 'assets/media/email.png' %}" alt="email icon" class="contacticon">
+                <p class="info">  xian.zhou15@gmail.com</p>
+            </li>
+            
+            <li class="contactaction">
+                <a href="#"><img src="{% static 'assets/media/github.jpg' %}" alt="github icon" class="contacticon"></a>
+                <p class="info"><a href="#" class="coloring"> Github </a></p>
+            </li>
+
+            <li class="contactaction">
+                <a href="#"><img src="{% static 'assets/media/linkedin.png' %}" alt="linkedin icon" class="contacticon"></a>
+                <p class="info"><a href="#" class="coloring"> LinkedIn </a></p>
+            </li>
+
+            <li class="contactaction">
+                <img src="{% static 'assets/media/dm.jpg' %}" alt="direct message icon" class="contacticon">
+                <p class="info"> Send me direct messages using form below: </p>
+            </li>
+        </ul>
+    
+        <div class="formcontainer">
+            <form action="/contact" method="post">
+                {% csrf_token %} <!--In Django, {% csrf_token %} is a template tag used to include a CSRF (Cross-Site Request Forgery) token in a form.
+                                CSRF is a security measure to protect against malicious attacks that exploit the trust between a website and its users. It ensures that the form-->
+                <div class="formgroup">
+                    <h5>
+                        <label for="viewername"><i class="fa-solid fa-user-pen" style="color: #7f31dd;"></i>Name</label>
+                    </h5>
+                    <input type="text" id="viewername" name ="viewername" required> <!--if the text area is not required, then simply omit the word "required"-->
+                </div>
+                
+                <div class="formgroup">
+                    <h5>
+                        <label for="emailaddr"><i class="fa-solid fa-envelope-circle-check" style="color: #7f31dd;"></i>Email</label>
+                    </h5>
+                    <input type="text" id="emailaddr" name ="emailaddr" required>
+                </div>
+
+                <div class="formgroup">
+                    <h5>
+                        <label for="phone"><i class="fa-solid fa-phone" style="color: #7f31dd;"></i>Phone No.</label>
+                    </h5>
+                    <input type="text" id="phone" name ="phone">    
+                </div>
+
+                <div class="formgroup">
+                    <h5>
+                        <label for="message"><i class="fa-solid fa-comment-dots" style="color: #7f31dd;"></i>Message me</label>
+                    </h5>
+                    <textarea id="message" name ="message" row="40" column="46" required></textarea>
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+            
+            
+
+            {% comment %} <div id="success-message" style="display: none;">
+                Message submitted successfully!
+            </div> {% endcomment %}
+            {% comment %} <script src="{% static 'assets/js/main.js' %}"></script> {% endcomment %}
+
+        </div>       
+        {% for message in messages %}
+        
+            <strong class="alert">{{message}}</strong>
+        
+        {% endfor %}
+    </div>
+
+</div>
+{%endblock content%}
+

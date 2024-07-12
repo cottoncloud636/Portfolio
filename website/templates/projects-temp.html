@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+{%block title %}Projects{% endblock title %}
+{%load static%}
+
+{%block background-image%}{% static 'assets/img/nebula.jpg' %}{%endblock background-image%}
+{%block header-image%}{% static 'assets/img/venus-motion.gif'%}{%endblock header-image%}
+
+{% block content %}
+<div class="btmcontainer">
+    <div class="subcontainer">
+        <div class="projectname">
+            <div class="leftcontainer">
+                <p>Click me!</p>
+            </div>
+            <div class="rightcontainer">
+                <h3>GUI in Java</h3>
+                <a href="{% url 'project1' %}"><img src="{% static 'assets/media/candles.jpg' %}" class="projectpicture"></a>
+            </div>
+        </div>
+        <div class="projectname">
+            <div class="leftcontainer">
+                <p>Click me!</p>
+            </div>
+            <div class="rightcontainer">
+                <h3>name1</h3>
+                <a href="#"><img src="{% static 'assets/media/candles.jpg' %}" class="projectpicture"></a>
+            </div>
+        </div>
+        <div class="projectname">
+            <div class="leftcontainer">
+                <p>Click me!</p>
+            </div>
+            <div class="rightcontainer">
+                <h3>name1</h3>
+                <a href="#"><img src="{% static 'assets/media/candles.jpg' %}" class="projectpicture"></a>
+            </div>
+        </div>
+        <div class="projectname">
+            <div class="leftcontainer">
+                <p>Click me!</p>
+            </div>
+            <div class="rightcontainer">
+                <h3>name1</h3>
+                <a href="#"><img src="{% static 'assets/media/candles.jpg' %}" class="projectpicture"></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% comment %} <link rel="stylesheet" href="{% static 'assets/css/style.css' %}"> {% endcomment %}
+
+{%load static%}
+
+{% block background-image %} {% static 'assets/img/Background.jpg' %} {%endblock background-image%}
+{% block header-image %}<img src="{% static 'assets/img/ID-Photo.jpg' %} " alt="header-image" class="picture"> {% endblock header-image %}
+
+{% block content %}
+<div class="btmcontainer">
+    <div class="innercontainer">
+        <h1 text-anchor="top" y="50%" id="welcome1" class="welcome">Welcome to my website.</h1>
+        <h1 text-anchor="top" y="50%" id="welcome2" class="welcome">欢迎来到我的网站。</h1>
+        <h1 text-anchor="top" y="50%" id="welcome1" class="welcome">Bienvenue sur mon site web.</h1>
+        <h1 text-anchor="top" y="50%" id="welcome3" class="welcome">Добро пожаловать на мой веб-сайт.</h1>
+    </div>
+</div>
+
+<script src="{% static 'assets/js/main.js' %}"></script>
+{% endblock content %}
+
+
+
+
+
+<!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+
+

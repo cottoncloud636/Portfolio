@@ -1,0 +1,563 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+.nav{
+    margin-top: 60px;
+    padding-left: 40px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.picture{
+    
+    border-radius: 50%;
+    width: 150px;
+}
+
+
+.navlinks{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-evenly;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-size: 20px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.navlinks li a{
+    color: rgb(141, 94, 236);
+}
+
+.name{
+    color: rgb(141, 94, 236);
+    /* color: #D0A8F9; */
+    font-size: 40px;
+    font-family: 'black ops one', cursive;
+}
+
+.btmcontainer{ /*home.html*/
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+.innercontainer{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+}
+
+.welcome{
+    display: inline-block;
+    height: 70px;
+    font-size: 44px;
+    font-weight:bold;
+    color: rgb(95, 24, 235);
+    /* animation: typing 4s steps(24, end); Adjust the duration (4s) and number of steps (24) as needed */
+    /* border-right: 0.15em solid #000; not really need this, this will display a black solid line. If use: start with zero width */
+    /* width: 0;  */ /*if I add width:0, sentences will disappear after the animation, because it tells html to go back to the 0 width after finishing displaying*/
+    white-space: nowrap;
+    
+    -webkit-text-stroke: 0.2px rgb(186, 146, 241);
+    
+    /* overflow: hidden; */
+    opacity: 5%;
+}
+
+
+#welcome1{
+    font-family: 'Bruno Ace', cursive;
+}
+#welcome2{
+    font-family: 'ZCOOL XiaoWei', sans-serif;
+}
+#welcome3{
+    font-family: 'Unbounded', cursive;
+}
+
+.outerp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.intro{
+    display: flex;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+h2{
+    font-size: 40px;
+    color:rgb(176, 138, 233)
+}
+
+.star{
+    width: 40px;
+    margin-left: 15px;
+}
+
+.para::after{ 
+    content:"|";
+    animation: blink-caret 0.65s infinite;
+}
+
+.para{
+    color:rgb(176, 138, 233);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 23px;
+    width: 1250px;
+    opacity: 5%;
+    margin-bottom: 1em;
+}
+
+@keyframes blink-caret{
+    0%, 100%{ opacity: 0;}
+    50% {opacity: 1;}
+}
+
+.resumecontainer{
+    display: flex;
+    justify-content: center;
+}
+
+.resume{
+    width: 1000px;
+    height: 800px;
+}
+
+/*project summary page*/
+
+.btmprojects{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.subcontainer{
+    display: flex;
+    justify-content: center; /* Center align the items */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 20px;
+    max-width: 1200px;   
+    margin-top: 40px;
+}
+
+.proj{
+    background-color: #dcb8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #0c0505;
+   
+}
+
+.proj-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectname{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.projectpicture-1, .projectpicture-2, .projectpicture-3, .projectpicture-4, 
+.projectpicture-5, .projectpicture-6{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.proj-body {
+    margin: 10px 0;
+}
+
+.read-more {
+    margin-top: 10px;
+    background-color: #205dbb;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.proj-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+
+.proj-header h4{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+}
+
+.brf{
+    padding-top: 12px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.leftclick{
+    padding-top: 10px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+}
+
+.likes{
+    margin-left:20px;
+    font-size: 12px;
+}
+
+.likeme{
+    background-color: #e44c65;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* end: project summary page*/
+
+
+.btmcontact{
+    margin-right: 80px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.contactaction{
+    display: flex;
+    margin-top: 10px;
+}
+
+.contacticon{
+    width: 60px;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: rgb(157, 49, 223);
+    /* text-align: center; */
+}
+
+.coloring{
+    color: rgb(157, 49, 223);
+}
+
+form{
+    height: 320px;
+}
+
+.formcontainer{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(191, 148, 234, 0.3);
+    border: 1px solid #ccc;
+    padding-top: 6px;
+    border-radius: 20px;
+    margin: 20px 20px 20px 70px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(202, 102, 233);
+    width: 300px;
+}
+
+.formgroup{
+    margin-top: 10px;
+}
+
+h5{
+    margin-bottom: 5px;
+}
+
+#viewername, #emailaddr, #phone{
+    width: 250px;
+    height: 25px;
+}
+
+#message{
+    width: 250px;
+    height: 80px;
+}
+
+.btn{
+    display: block;
+    height:30px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.518);
+    color: rgb(202, 102, 233);
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3), transparent, rgba(255, 255, 255, 0.3));
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    animation: shining 1.5s infinite linear;
+}
+@keyframes shining {
+    0% {
+        background-position: -200px;
+        }
+    100% {
+        background-position: calc(200px + 100%);
+      }
+}
+
+.picarea{
+    display: flex;
+    justify-content: center;
+}
+
+.projtitle{
+    margin-left: 300px;
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    position: relative;
+    background: linear-gradient(45deg, #cec0d0, #950897, #d882d6);
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari compatibility */
+    color: transparent;
+    animation: shining 4s infinite;
+}
+
+.desc{
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.project-detail{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center;
+    width: 400px; */
+}
+
+.project-detailsub{
+    display: flex;
+    flex-direction: column;
+    width: 1300px;
+}
+
+.project-detail p{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.special-word{
+    font-weight: 900;
+    font-style: italic;
+}
+
+.project-1 {
+    width: 1200px;
+    height: 3200px;
+}
+
+.project-2 {
+    width:1500px;
+    height: 3000px;
+}
+
+.project-3 {
+    width:1500px;
+    height: 600px;
+}
+
+.project-4 {
+    width:1500px;
+    height: 800px;
+    margin-bottom: 40px;
+}
+
+.project-5{
+    width: 1300px;
+    height: 800px;
+    margin-bottom: 40px;
+}
+
+.alert{ /* contact.html */
+    color: rgb(230, 230, 147);
+    font-size: 18px;
+    font-family: 'Lobster', cursive;
+}
+
+
+
+/*for resume*/
+.resume-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* background: linear-gradient(to right, #f5f092, #fffacd); Added gradient background */
+  }
+  
+  .left-column,
+  .right-column {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .left-column {
+    flex: 1;
+    background: #f5f092;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ffefba, #ffffff); /* Added gradient background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    
+  }
+  
+  
+  .left-column h1 {
+    font-size: 28px; /* Increased font size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Changed color */
+  }
+  
+  .left-column h2 {
+    font-size: 22px; /* Increased font size */
+    color: #663aeb; /* Changed color */
+    margin-bottom: 20px;
+  }
+  
+  
+  .contact-info,
+    .skills {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 90%; /* Adjusted width */
+  font-size: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.contact-info i,
+.skills i {
+  margin-right: 10px; /* Added margin-right */
+}
+
+.skilltext{
+    margin-left: 20px;
+}
+  
+  .right-column {
+    flex: 2;
+    /* background: #fff; */
+    border-radius: 10px;
+  }
+  
+  .section {
+    background: #FAF9F2;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .section p,
+  .section ul {
+    font-size: 20px;
+    color: #555;
+  }
+  
+  .section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .section ul li {
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .section ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ff6f61;
+  }
+  
+  .project {
+    margin-bottom: 20px;
+  }
+  
+  .project h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .project ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .project ul li {
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .project ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ff6f61;
+  }
+  /*end for resume section*/

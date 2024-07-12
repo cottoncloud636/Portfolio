@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{%block title%}About{%endblock title%}
+{%load static%}
+
+{%block background-image %} {% static 'assets/img/milkyway.png' %} {%endblock background-image%}
+{%block header-image%}<img src=" {% static 'assets/img/solar-system-motion.gif'%} " alt="header-image" class="picture"> {%endblock header-image%}
+
+
+{%block content%}
+<div class="outerp">
+    <div class="intro">
+        <h2> About me </h2>
+        <img src="{% static 'assets/img/star.png' %}" alt="star" class="star">
+    </div>
+    <div class="paragraph">
+        <p class="para">Thank you for clicking the About button. I am Xian (Natasha), a former Accountant 🤓 with an enthusiasm for software development that has evolved during the course of my previous career 😎.</p>
+        <p class="para">Switching from a world of finance to computer science wasn't without its challenges! But I embraced it with my whole heart. I love the intensity and the curiosity of wanting to know the unknown. To realize this transformation, I went back to school and earned a master's degree in Computer Science from Queens College of CUNY, as well as hard works on numerous days and nights. With the mysteries and struggles gradually dissipating, of those once seemingly insurmountable, all of the efforts have become worthwhile.</p>
+        <p class="para">I studied various topics in CS over time, some widely recognized areas includes: computer architecture, data structure, algorithm, C++, Java, assembly and much more. While many of our school projects were done in Java, I found it seamless to transition to C++ or Python when needed, as the fundamental principles largely overlap, if not entirely the same. And the more I get exposed to various technologies or languages, the more I am comfortable to experience different fields and eventually good at it with necessary amount of hands-on work. And in today's digital age, resources to learn new technologies or enhance existing skills are readily accessible. All that being said, I am comfortable to engage with any languages, tools, frameworks and other emerging technologies when tackling tasks. </p>
+        <p class="para">A few words to summarize myself 😬: I also like to study human languages: speak English, Mandarin, some French and a few words of Russian. Currently serve in Navy reserve. While some may question my decision to shift my career entirely, but all I can say is because of this pure excitement towards the tech and science world, to make something happen and to hold a sence of achievement by the end of the day. And I know this is a competitive field, but like someone used to say: "All I am asking for is a fair chance". All because I know I can and I know I would love it.</p>
+    </div>
+</div>    
+
+<script src="{% static 'assets/js/main.js' %}"></script>
+{%endblock content%}
